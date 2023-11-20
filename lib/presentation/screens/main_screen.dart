@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_bar_app/presentation/screens/LoginScreen.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -98,9 +99,15 @@ class _MainScreenState extends State<MainScreen> {
           type: BottomNavigationBarType.shifting,
           currentIndex: selectedItem,
           onTap: (value) {
-            setState(() {
-              selectedItem = value;
-            });
+            if (value == 0) {}
+            if (value == 1) {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => LoginScreen()));
+            }
+            if (value == 2) {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => LoginScreen()));
+            }
           },
           elevation: 0,
           items: [
