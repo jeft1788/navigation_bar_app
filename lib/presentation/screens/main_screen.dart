@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:navigation_bar_app/presentation/screens/LoginScreen.dart';
+import 'package:navigation_bar_app/presentation/screens/maps_screen.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -106,7 +107,7 @@ class _MainScreenState extends State<MainScreen> {
             }
             if (value == 2) {
               Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => LoginScreen()));
+                  .push(MaterialPageRoute(builder: (context) => MapScreen()));
             }
           },
           elevation: 0,
